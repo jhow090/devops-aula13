@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Lista dos Locais das Provas</h1>
+</div>
+
+<table class="table">
+    <tr><th>Escola</th><th>Endereço</th><th>Cidade</th><th>Estado</th></tr>
+        {% for prova in prova %}
+          <tr><td>{{ prova.escola}}</td><td>{{ prova.endereco }}</td><td>{{ prova.cidade }}</td><td>>{{ prova.estado }}</td></tr>
+        {% endfor %}
+</table>
+
+{% endblock %}
