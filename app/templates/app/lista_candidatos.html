@@ -1,0 +1,16 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1>Lista de Candidatos</h1>
+</div>
+
+<table class="table">
+    <tr><th>Nome do Candidato</th><th>RG</th><th>CPF</th></tr>
+        {% for candidato in candidato  %}
+          <tr><td>{{ curso.nome }}</td><td>{{ curso.rg }}</td><td>{{ curso.cpf }}</td></tr>
+        {% endfor %}
+</table>
+
+{% endblock %}
